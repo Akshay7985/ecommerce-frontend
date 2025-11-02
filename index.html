@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Commerce Frontend</title>
-    <link rel="stylesheet" href="styles/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEase | E-Commerce Frontend</title>
+  <link rel="stylesheet" href="styles/main.min.css" />
 </head>
 <body>
-    <header class="header">
-  <div class="logo">ShopEase</div>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="logo"><a href="index.html">ShopEase</a></div>
 
-  <nav class="nav-links">
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="product.html">Products</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <span id="auth-link"></span>
+    </nav>
 
-  <div class="header-right">
-    <div class="search-bar">
-      <input type="text" placeholder="Search products..." />
+    <div class="header-right">
+      <div class="search-bar">
+        <input type="text" placeholder="Search products..." />
+      </div>
+      <div class="cart-icon">
+        <a href="cart.html">🛒 <span class="cart-badge">0</span></a>
+      </div>
+      <div class="hamburger">☰</div>
     </div>
-    <div class="cart-icon">
-      🛒
-      <span class="cart-badge">2</span>
-    </div>
-    <div class="hamburger">
-      ☰
-    </div>
-  </div>
-</header>
-<!-- ===== HERO SECTION ===== -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Biggest Sale of the Year!</h1>
-    <p>Up to 50% off on all new arrivals. Grab your favorites before they’re gone!</p>
-    <button class="cta-btn">Shop Now</button>
-  </div>
-</section>
+  </header>
 
-    <script src="scripts/app.js"></script>
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Biggest Sale of the Year!</h1>
+      <p>Up to 50% off on all new arrivals. Grab your favorites before they’re gone!</p>
+      <button class="cta-btn" onclick="window.location.href='product.html'">Shop Now</button>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PRODUCTS ===== -->
+  <section class="product-section">
+    <h2>Featured Products</h2>
+    <div id="product-grid" class="product-grid"></div>
+  </section>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="scripts/common.js"></script>
+  <script src="scripts/app.min.js"></script>
+  <script type="module" src="scripts/auth.js"></script>
 </body>
 </html>
